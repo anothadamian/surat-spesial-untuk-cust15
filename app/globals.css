@@ -1308,3 +1308,22 @@ footer { border-color: rgba(149, 196, 231, .17); }
   .postcard { overflow: hidden; }
   .cover-photo { transform: rotate(-90deg) scale(1.48); }
 }
+
+/* Mobile cover photo: show the complete rotated image. */
+@media (max-width: 600px) {
+  .postcard {
+    right: 22px;
+    width: 124px;
+    min-height: 89px;
+  }
+  .cover-photo {
+    inset: auto;
+    top: -25px;
+    left: 25px;
+    width: 64px;
+    height: 114px;
+    object-fit: cover;
+    object-position: center;
+    transform: rotate(-90deg);
+  }
+}
